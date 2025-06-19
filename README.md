@@ -29,6 +29,40 @@ If any unknown human is detected, an alert beep sound is triggered.
 
 The final processed video stream is displayed live using Gradio’s web interface.
 
+📥 Additional Setup (Very Important for Windows)
+Before installing face_recognition, make sure you have C/C++ Build Tools installed:
+
+✅ Install Visual Studio Build Tools:
+Download Visual Studio Build Tools.
+
+During installation, select:
+
+C++ build tools
+
+Include:
+
+Windows 10 SDK
+
+C++ x64/x86 build tools
+
+Complete the installation and restart your system.
+
+📌 Reason:
+The face_recognition library relies on dlib, which requires C++ compilation during installation.
+Without C++ build tools, installing face_recognition will fail on Windows.
+
+✅ Also Install CMake:
+bash
+Copy
+Edit
+pip install cmake
+Note: If you already have CMake installed via your system PATH, you can skip this step.
+
+✅ Updated Requirements Summary
+Dependency	Reason
+C++ Build Tools	Required for dlib during face_recognition install
+CMake	Helps compile dlib binaries
+
 📦 Requirements
 ✅ Python Version
 Python 3.10.x is recommended for compatibility.
